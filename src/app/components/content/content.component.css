@@ -36,7 +36,7 @@
 }
  .midTitle {
     position: relative;
-    font-size: 5rem;
+    font-size: 3rem;
     color: black;
     background-color: transparent;
     margin-left: 40%;
@@ -91,7 +91,7 @@
 }
 .bottomTitle {
     position: relative;
-    font-size: 5rem;
+    font-size: 3rem;
     color: black;
     font-family: chivo;
     background-color: transparent;

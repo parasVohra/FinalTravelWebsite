@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationExtras, NavigationEnd } from '@angular/router';
+import { Router, NavigationExtras, NavigationEnd , ActivatedRoute } from '@angular/router';
 declare var $:any;
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   somePoperty = true;
 
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private route: ActivatedRoute) {
     
   }
 
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     
-
+    console.log(this.router.url);
   }
 
 }

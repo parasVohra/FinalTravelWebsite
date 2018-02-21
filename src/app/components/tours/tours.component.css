@@ -61,7 +61,7 @@
     grid-row-start: 1;
     grid-row-end: 2;
     grid-area: honey;
-    background: url(../../../assets/images/adventure-3.jpg);
+    background: url(../../../assets/images/sunset-1.jpg);
     background-size: cover;
     background-position: top;
     padding: 8rem;
@@ -86,7 +86,7 @@
     grid-row-start: 1;
     grid-row-end: 2;
     grid-area: adv;
-    background:url(../../../assets/images/adventure-5.jpg);
+    background:url(../../../assets/images/paragliding-2.jpg);
     background-size: cover;
     background-position: top;
     padding: 8rem;
@@ -111,7 +111,7 @@
     grid-row-start: 2;
     grid-row-end: 3;
     grid-area: fam;
-    background: url(../../../assets/images/adventure-7.jpg);
+    background: url(../../../assets/images/family.jpg);
     background-size: cover;
     background-position: top;
     padding: 8rem;
@@ -161,7 +161,7 @@
     grid-row-start: 2;
     grid-row-end: 3;
     grid-area: back;
-    background: url(../../../assets/images/adventure-2.jpg);
+    background: url(../../../assets/images/journey.jpg);
     background-size: cover;
     background-position: top;
     padding: 8rem;
