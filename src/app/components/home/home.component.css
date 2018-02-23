@@ -26,13 +26,17 @@
 .homeWrapper{
     display: grid;
     grid-template-rows: 100vh;
+    padding-top: 3rem;
 }
 .homeScreen{
-    background:linear-gradient(0deg, rgba(37, 37, 37, 0.43), rgba(37, 37, 37, 0.43)), url(../../../assets/images/romania-1.jpg);
+    background: url(../../../assets/images/bhutan.jpg);
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
     display: grid;
     grid-template-columns: 2fr 10fr 2fr;
     grid-template-areas: 
@@ -210,11 +214,11 @@
 /* Media queries */
 @media screen and  (min-width: 813px) and (max-width:1440px) {
     .homeScreen{
-        background:linear-gradient(0deg, rgba(37, 37, 37, 0.43), rgba(37, 37, 37, 0.43)), url(../../../assets/images/romania-1.jpg);
+        background: url(../../../assets/images/bhutan.jpg);
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        transition: .5s ease-in-out;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -232,11 +236,11 @@
         grid-template-rows: 100vh;
     }
     .homeScreen{
-        background:linear-gradient(0deg, rgba(37, 37, 37, 0.43), rgba(37, 37, 37, 0.43)), url(../../../assets/images/romania-1.jpg);
+        background: url(../../../assets/images/bhutan.jpg);
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        transition: .5s ease-in-out;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 

@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { OnDestroy } from "@angular/core";
+import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/takeUntil';
+import { DataServiceService } from '../../components/data-service.service';
 import { Router, NavigationExtras, NavigationEnd , ActivatedRoute } from '@angular/router';
+//import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs/Rx';
 declare var $:any;
 @Component({
   selector: 'app-home',
@@ -9,11 +15,19 @@ declare var $:any;
 })
 export class HomeComponent implements OnInit {
 
+  DataArray:any = {};
   somePoperty = true;
+  selectTour:string  = "All";
+  photo:string;
+  tourData:any = {};
+
+  sub: any;
+  private onDestroy$ = new Subject<void>();
 
 
-  constructor(private router:Router, private route: ActivatedRoute) {
-    
+
+  constructor(public service : DataServiceService, private router:Router, private route: ActivatedRoute) {
+   // this.service.getJSON().subscribe(data => {this.DataArray = data; console.log(data.packages); this.photo = data.packages.bgImage; })
   }
 
   sendAllPackages(){ 
@@ -33,10 +47,126 @@ export class HomeComponent implements OnInit {
         $('.menuScreen').toggleClass('displayBlock');
         $('body').toggleClass('stopScroll');
   }
+doSomething(){
+console.log("Paars sdsdsd")
+}
+
+ngOnDestroy(): void {
+  this.onDestroy$.next();
+}
+
 
   ngOnInit() {
+
     
-    console.log(this.router.url);
+
+    this.route.queryParams.subscribe(params => {
+      this.selectTour = params["data"];
+      
+    })
+
+    console.log(this.selectTour);
+    
+   if (this.selectTour == null){
+    let ind = 0;
+
+    var pathArray = ['../../../assets/images/home-1.jpg' , '../../../assets/images/home-2.jpg','../../../assets/images/home-3.jpg','../../../assets/images/home-4.jpg'];
+    this.sub = Observable.interval(8000).takeUntil(this.onDestroy$)
+    .subscribe((val) => { 
+
+      if (this.selectTour == null){
+      
+      $(".homeScreen").css("background", 'url(' + pathArray[ind] + ')');
+     // $(".homeScreen").css("background-size", "cover");
+      $(".homeScreen").css("background-position", "center");
+      $(".homeScreen").css("background-repeat", "no-repeat");
+      $(".homeScreen").css("transition", "all 1s ease-in-out");
+      $(".homeScreen").css("-webkit-transition", "all 1s ease-in-out");
+      $(".homeScreen").css("-moz-transition", "all 1s ease-in-out");
+      $(".homeScreen").css("-o-transition", "all 1s ease-in-out");
+      $(".homeScreen").css("-ms-transition", "all 1s ease-in-out");
+
+
+      if(ind < pathArray.length){
+        ind++;
+      }
+      if (ind >= pathArray.length){
+        ind = 0;
+      }
+     // console.log(ind)
+    }
+
+
+    });
+
+    }
+
+   else if(this.selectTour == "National") {
+   
+    $(".homeScreen").css("background", "url(../../../assets/images/Car.jpg)");
+    $(".homeScreen").css("background-size", "cover");
+    $(".homeScreen").css("background-position", "center");
+    $(".homeScreen").css("background-repeat", "no-repeat");
+    $(".homeWrapper").css("grid-template-rows","95vh")
+   }
+   else if(this.selectTour == "Family") {
+ 
+    $(".homeScreen").css("background", "url(../../../assets/images/sunset-1.jpg)");
+    $(".homeScreen").css("background-size", "cover");
+    $(".homeScreen").css("background-position", "center");
+    $(".homeScreen").css("background-repeat", "no-repeat");
+    $(".homeWrapper").css("grid-template-rows","95vh")
+   }
+
+   else if(this.selectTour == "International") {
+
+    $(".homeScreen").css("background", "url(../../../assets/images/family.jpg)");
+    $(".homeScreen").css("background-size", "cover");
+    $(".homeScreen").css("background-position", "center");
+    $(".homeScreen").css("background-repeat", "no-repeat");
+    $(".homeWrapper").css("grid-template-rows","95vh")
+   }
+
+   else if(this.selectTour == "Backpacking") {
+ 
+    $(".homeScreen").css("background", "url(../../../assets/images/journey.jpg)");
+    $(".homeScreen").css("background-size", "cover");
+    $(".homeScreen").css("background-position", "center");
+    $(".homeScreen").css("background-repeat", "no-repeat");
+    $(".homeWrapper").css("grid-template-rows","95vh")
+   }
+   else if(this.selectTour == "Adventure") {
+
+    $(".homeScreen").css("background", "url(../../../assets/images/paragliding-2.jpg)");
+    $(".homeScreen").css("background-size", "cover");
+    $(".homeScreen").css("background-position", "center");
+    $(".homeScreen").css("background-repeat", "no-repeat");
+    $(".homeWrapper").css("grid-template-rows","95vh")
+   }
+   else{
+
+    this.service.getJSON().subscribe(data => {this.DataArray = data;
+  
+
+
+       console.log(data.packages.length); 
+       for(var i =0; i < data.packages.length; i++){
+        if (this.selectTour == data.packages[i].packageName){
+          $(".homeScreen").css('background', 'url(' + this.DataArray.packages[i].bgImage + ')');
+          $(".homeScreen").css("background-size", "cover");
+          $(".homeScreen").css("background-position", "center");
+          $(".homeScreen").css("background-repeat", "no-repeat");
+          $(".homeWrapper").css("grid-template-rows","95vh")
+  
+          console.log(data.packages[i].bgImage);
+        }
+      }
+       
+       
+       this.photo = data.packages.bgImage; })
+      
+    
+   }
   }
 
 }

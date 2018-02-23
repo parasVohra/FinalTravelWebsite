@@ -1,7 +1,7 @@
 .tourWrapper{
     display:grid;
     grid-template-columns: 2fr 8fr 2fr;
-    padding-bottom: 2rem;
+    padding-bottom: 10rem;
     grid-template-areas: 
     " . tourContent . ";
 }
