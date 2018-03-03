@@ -33,10 +33,10 @@
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     display: grid;
     grid-template-columns: 2fr 10fr 2fr;
     grid-template-areas: 
@@ -108,9 +108,7 @@
     display: none;
 }
 
-.Option{
-    
-}
+
 .destination {
     position: absolute;
     top: 4vw;
@@ -218,7 +216,7 @@
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
-        transition: .5s ease-in-out;
+        transition: 0.5s ease-in-out;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -240,7 +238,7 @@
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
-        transition: .5s ease-in-out;
+        transition: 0.5s ease-in-out;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 

@@ -3,7 +3,7 @@
     background-color: #212322;
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
-    grid-auto-rows: 80rem;
+    grid-auto-rows: 81rem;
     grid-template-areas: 
     " . top . ";
 }

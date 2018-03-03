@@ -25,6 +25,7 @@ const appRoutes: Routes = [
   {path:'about', component: AboutComponent },
   {path:'package-list', component: TourListComponent },
   {path:'package-details', component: TourDetailsComponent },
+  {path:'package-luxurious', component: LuxuryComponent },
 ]
 
 

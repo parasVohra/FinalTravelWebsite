@@ -14,24 +14,24 @@
         </div>
         <div class="menuScreen">
           <div class="navItem" routerLink="/package-list" (click)="sendAllPackages()">DESTINATIONS</div>
-          <div class="navItem">ABOUT US</div>
-          <div class="navItem">SERVICES</div>
-          <div class="navItem">VIDEOS</div>
+          <div class="navItem" id = "contentScreen" routerLink="/" (click)="scrollToThis($event)" >ABOUT US</div>
+          <div class="navItem" id = "serviceWrapper" routerLink="/" (click)="scrollToThis($event)" >SERVICES</div>
+          <div class="navItem" (click)="openYoutube()">VIDEOS</div>
           <div class="navItem">BLOG</div>
           <div class="navItem">TESTIMONIALS</div>
-          <div class="navItem">CONTACT US</div>
+          <div class="navItem" id = "footerWrapper" routerLink="/" (click)="scrollToThis($event)">CONTACT US</div>
           <div class="navItem">PAY NOW</div>
           <div class="cNum">+91 8130830710</div>
           <div class="cMail">explorersgetaway@gmail.com</div>
         </div>
           <div class="mobileMenu">
             <div class="destination Option" routerLink="/package-list" (click)="sendAllPackages()">DESTINATIONS</div>
-            <div class="aboutUs Option">ABOUT US</div>
-            <div class="services Option">SERVICES</div>
-            <div class="videos Option">VIDEOS</div>
+            <div class="aboutUs Option" routerLink="/" id = "contentScreen" (click)="scrollToThis($event)">ABOUT US</div>
+            <div class="services Option" routerLink="/"  id = "serviceWrapper" (click)="scrollToThis($event)" >SERVICES</div>
+            <div class="videos Option" (click)="openYoutube()">VIDEOS</div>
             <div class="blog Option">BLOG</div>
             <div class="testimonials Option">TESTIMONIALS</div>
-            <div class="contact Option">CONTACT US</div>
+            <div class="contact Option" id = "footerWrapper" routerLink="/" (click)="scrollToThis($event)">CONTACT US</div>
             <div class="payment Option">PAY NOW</div>
           </div>
       </div>

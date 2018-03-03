@@ -1,6 +1,7 @@
 .serviceWrapper{
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
+    margin-top: 3rem;
     grid-template-areas: 
     ". service . ";
 }

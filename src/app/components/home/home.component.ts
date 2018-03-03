@@ -28,6 +28,30 @@ export class HomeComponent implements OnInit {
 
   constructor(public service : DataServiceService, private router:Router, private route: ActivatedRoute) {
    // this.service.getJSON().subscribe(data => {this.DataArray = data; console.log(data.packages); this.photo = data.packages.bgImage; })
+  };
+
+  scrollToThis(event:any){
+
+    var p = $("." + event.target.id);
+    var position = p.offset();
+    var aboutPos = position.top;
+    console.log(event.target.id);
+    console.log(p.offset());
+    window.scrollTo(0, aboutPos);
+    console.log("click on about us");
+
+    var screenWidth = $(window).width();
+    if(screenWidth < 813){
+      $(".menuScreen").toggleClass('displayBlock');
+      $(".secondBar").toggleClass("pRotate");
+        $(".thirdBar").toggleClass("nRotate");
+        $(".firstBar").toggleClass("hide");
+        $(".fourthBar").toggleClass("hide");
+    }
+    
+
+
+    
   }
 
   sendAllPackages(){ 
@@ -51,6 +75,11 @@ doSomething(){
 console.log("Paars sdsdsd")
 }
 
+openYoutube(){
+  window.location.href='https://www.youtube.com/channel/UC8c2VCmIyK8V4QkO658f-WA';
+  console.log("clicked")
+}
+
 ngOnDestroy(): void {
   this.onDestroy$.next();
 }
@@ -58,7 +87,7 @@ ngOnDestroy(): void {
 
   ngOnInit() {
 
-    
+    console.log(this.router.url);
 
     this.route.queryParams.subscribe(params => {
       this.selectTour = params["data"];
@@ -66,25 +95,35 @@ ngOnDestroy(): void {
     })
 
     console.log(this.selectTour);
+
+   if(this.router.url == '/package-luxurious') {
+    window.scrollTo(0, 0);
+ 
+    $(".homeScreen").css("background", "url(../../../assets/images/w2.jpg)");
+    $(".homeScreen").css("background-size", "cover");
+    $(".homeScreen").css("background-position", "center");
+    $(".homeScreen").css("background-repeat", "no-repeat");
+    $(".homeWrapper").css("grid-template-rows","80vh")
+     }
     
    if (this.selectTour == null){
     let ind = 0;
 
-    var pathArray = ['../../../assets/images/home-1.jpg' , '../../../assets/images/home-2.jpg','../../../assets/images/home-3.jpg','../../../assets/images/home-4.jpg'];
+    var pathArray = ['../../../assets/images/paper.jpg' , '../../../assets/images/home-1.jpg','../../../assets/images/maldives-1.jpg','../../../assets/images/gongga.jpg', '../../../assets/images/rice.jpg', '../../../assets/images/home-3.jpg', '../../../assets/images/Australia.jpg', '../../../assets/images/bhutan.jpg'];
     this.sub = Observable.interval(8000).takeUntil(this.onDestroy$)
     .subscribe((val) => { 
 
-      if (this.selectTour == null){
+      if (this.selectTour == null && this.router.url != '/package-luxurious'){
       
       $(".homeScreen").css("background", 'url(' + pathArray[ind] + ')');
-     // $(".homeScreen").css("background-size", "cover");
+      $(".homeScreen").css("background-size", "cover");
       $(".homeScreen").css("background-position", "center");
       $(".homeScreen").css("background-repeat", "no-repeat");
       $(".homeScreen").css("transition", "all 1s ease-in-out");
-      $(".homeScreen").css("-webkit-transition", "all 1s ease-in-out");
-      $(".homeScreen").css("-moz-transition", "all 1s ease-in-out");
-      $(".homeScreen").css("-o-transition", "all 1s ease-in-out");
-      $(".homeScreen").css("-ms-transition", "all 1s ease-in-out");
+      $(".homeScreen").css("-webkit-transition", "all 0.5s ease-in-out");
+      $(".homeScreen").css("-moz-transition", "all 0.5s ease-in-out");
+      $(".homeScreen").css("-o-transition", "all 0.5s ease-in-out");
+      $(".homeScreen").css("-ms-transition", "all 0.5s ease-in-out");
 
 
       if(ind < pathArray.length){
@@ -103,7 +142,7 @@ ngOnDestroy(): void {
 
    else if(this.selectTour == "National") {
    
-    $(".homeScreen").css("background", "url(../../../assets/images/Car.jpg)");
+    $(".homeScreen").css("background", "url(../../../assets/images/bedroom.jpg)");
     $(".homeScreen").css("background-size", "cover");
     $(".homeScreen").css("background-position", "center");
     $(".homeScreen").css("background-repeat", "no-repeat");
@@ -143,6 +182,8 @@ ngOnDestroy(): void {
     $(".homeScreen").css("background-repeat", "no-repeat");
     $(".homeWrapper").css("grid-template-rows","95vh")
    }
+
+   
    else{
 
     this.service.getJSON().subscribe(data => {this.DataArray = data;

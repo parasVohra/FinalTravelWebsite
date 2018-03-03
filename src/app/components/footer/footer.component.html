@@ -45,11 +45,11 @@
         </div>
         <div class="menuOptionBox">
             <div class="destination Option" routerLink="/package-list" (click)="sendAllPackages()">DESTINATIONS</div>
-            <div class="aboutUs Option">ABOUT US</div>
-            <div class="services Option">SERVICES</div>
+            <div class="aboutUs Option" id = "contentScreen" routerLink="/" (click)="scrollToThis($event)">ABOUT US</div>
+            <div class="services Option" id = "serviceWrapper" routerLink="/" (click)="scrollToThis($event)">SERVICES</div>
             <div class="blog Option">BLOG</div>
             <div class="testimonials Option">TESTIMONIALS</div>
-            <div class="contact Option">CONTACT US</div>
+            <div class="contact Option" id = "footerWrapper" routerLink="/" (click)="scrollToThis($event)">CONTACT US</div>
             <div class="payment Option">PAY NOW</div>
             <div class="videos Option">VIDEOS</div>
         </div>
