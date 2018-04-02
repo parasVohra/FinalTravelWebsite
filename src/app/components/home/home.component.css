@@ -29,7 +29,7 @@
     padding-top: 3rem;
 }
 .homeScreen{
-    background: url(../../../assets/images/bhutan.jpg);
+    background: url(../../../assets/images/paper.jpg);
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,7 +104,11 @@
 .cNum{
     display: none;
 }
-.cmail{
+.cMail{
+    display: none;
+}
+
+.cMail a{
     display: none;
 }
 
@@ -212,7 +216,7 @@
 /* Media queries */
 @media screen and  (min-width: 813px) and (max-width:1440px) {
     .homeScreen{
-        background: url(../../../assets/images/bhutan.jpg);
+        background: url(../../../assets/images/paper.jpg);
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -234,7 +238,7 @@
         grid-template-rows: 100vh;
     }
     .homeScreen{
-        background: url(../../../assets/images/bhutan.jpg);
+        background: url(../../../assets/images/paper.jpg);
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -289,6 +293,12 @@
     .email{
         display: none;
     }
+
+    .email a{
+        display: none;
+    }
+
+
 
 
 
@@ -389,6 +399,11 @@
         font-size:1.5rem;
         line-height: 6rem;
 
+    }
+
+    .cMail a{
+        display: block;
+        position: absolute;
     }
     
 

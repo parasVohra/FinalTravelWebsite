@@ -109,7 +109,7 @@ ngOnDestroy(): void {
    if (this.selectTour == null){
     let ind = 0;
 
-    var pathArray = ['../../../assets/images/paper.jpg' , '../../../assets/images/home-1.jpg','../../../assets/images/maldives-1.jpg','../../../assets/images/gongga.jpg', '../../../assets/images/rice.jpg', '../../../assets/images/home-3.jpg', '../../../assets/images/Australia.jpg', '../../../assets/images/bhutan.jpg'];
+    var pathArray = ['../../../assets/images/home-1.jpg','../../../assets/images/maldives-1.jpg','../../../assets/images/gongga.jpg', '../../../assets/images/rice.jpg', '../../../assets/images/home-3.jpg', '../../../assets/images/Australia.jpg', '../../../assets/images/bhutan.jpg','../../../assets/images/paper.jpg'];
     this.sub = Observable.interval(8000).takeUntil(this.onDestroy$)
     .subscribe((val) => { 
 

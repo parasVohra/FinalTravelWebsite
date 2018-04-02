@@ -64,7 +64,7 @@
     box-shadow: 4px 4px 12px black;
     background-size: cover;
     background-position: top;
-    transition: all 400ms ease-in;
+    transition: all 400ms ;
     
 }
 
@@ -74,14 +74,18 @@
     font-size: 2rem;
     z-index:3;
     font-weight: 100;
-    transition: all 400ms ease-in-out;
+    transition: all 400ms ;
     text-shadow: 2px 2px 4px black;
     white-space: nowrap;
 }
 
 .tourDisplay:hover .tourName{
-    transform: translateY(5rem);
     
+    
+}
+
+.tourDisplay:hover{
+    transform:scale(1.05)
 }
 
 @media screen and (max-width:1440px) {
