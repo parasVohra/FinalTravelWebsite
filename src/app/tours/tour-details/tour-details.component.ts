@@ -3,7 +3,7 @@ import { DataServiceService } from '../../components/data-service.service';
 import { Subscription } from 'rxjs/Subscription';
 import { ActivatedRoute,Params, NavigationEnd , Router } from '@angular/router';
 
-
+declare var $ : any;
 @Component({
   selector: 'app-tour-details',
   templateUrl: './tour-details.component.html',
@@ -40,6 +40,7 @@ export class TourDetailsComponent implements OnInit {
     //   }
       window.scrollTo(0, 0);
     //}
+
   }
     
 }

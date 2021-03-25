@@ -10,19 +10,20 @@
 .footerWrapper{
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
-    background-color: #212322;
+    background-color: #212121;
     grid-template-areas: 
     ". footer . ";
 }
 .footerScreen {
     display: grid;
     grid-area: footer;
-    background-color: #212322;
+    background-color: #212121;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 40rem 5rem;
+    grid-template-rows: 50rem 5rem;
     padding: 4rem;
     grid-template-areas: 
     "info address menuOp "
+    ". social .";
 }
 .footerScreen .infoBox {
     display: grid;
@@ -113,6 +114,20 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     border:none;
 }
 
+
+.socialMedia{
+    grid-area: social;
+}
+.Icon{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+}
+.social{
+   
+}
+
 @media screen and (max-width:1440px) {
     .footerWrapper{
         display: grid;
@@ -136,13 +151,14 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
         grid-area: footer;
         background-color: #212322;
         grid-template-columns: 1fr;
-        grid-template-rows: 40rem 40rem 40rem;
+        grid-template-rows: 50rem 40rem 45rem;
         padding-top: 4rem;
         padding-left: 5rem;
         grid-template-areas: 
         "address"
         "info"  
-        " menuOp ";
+        " menuOp "
+        "social";
     }
     .footerScreen .infoBox {
         display: grid;

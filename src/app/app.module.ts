@@ -18,12 +18,14 @@ import { TourListComponent } from './tours/tour-list/tour-list.component';
 import { TourDetailsComponent } from './tours/tour-details/tour-details.component';
 import { PackageListComponent } from './components/package-list/package-list.component';
 import { DataServiceService } from './components/data-service.service';
+import { LuxuryComponent } from './components/luxury/luxury.component';
 
 const appRoutes: Routes = [
   {path:'', component: MainComponent },
   {path:'about', component: AboutComponent },
   {path:'package-list', component: TourListComponent },
   {path:'package-details', component: TourDetailsComponent },
+  {path:'package-luxurious', component: LuxuryComponent },
 ]
 
 
@@ -41,7 +43,8 @@ const appRoutes: Routes = [
     MainComponent,
     TourListComponent,
     TourDetailsComponent,
-    PackageListComponent
+    PackageListComponent,
+    LuxuryComponent
   ],
   imports: [
     BrowserModule,

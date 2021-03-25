@@ -26,13 +26,17 @@
 .homeWrapper{
     display: grid;
     grid-template-rows: 100vh;
+    padding-top: 3rem;
 }
 .homeScreen{
-    background:linear-gradient(0deg, rgba(37, 37, 37, 0.43), rgba(37, 37, 37, 0.43)), url(../../../assets/images/romania-1.jpg);
+    background: url(../../../assets/images/paper.jpg);
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     display: grid;
     grid-template-columns: 2fr 10fr 2fr;
     grid-template-areas: 
@@ -100,13 +104,15 @@
 .cNum{
     display: none;
 }
-.cmail{
+.cMail{
     display: none;
 }
 
-.Option{
-    
+.cMail a{
+    display: none;
 }
+
+
 .destination {
     position: absolute;
     top: 4vw;
@@ -210,11 +216,11 @@
 /* Media queries */
 @media screen and  (min-width: 813px) and (max-width:1440px) {
     .homeScreen{
-        background:linear-gradient(0deg, rgba(37, 37, 37, 0.43), rgba(37, 37, 37, 0.43)), url(../../../assets/images/romania-1.jpg);
+        background: url(../../../assets/images/paper.jpg);
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        transition: 0.5s ease-in-out;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -232,11 +238,11 @@
         grid-template-rows: 100vh;
     }
     .homeScreen{
-        background:linear-gradient(0deg, rgba(37, 37, 37, 0.43), rgba(37, 37, 37, 0.43)), url(../../../assets/images/romania-1.jpg);
+        background: url(../../../assets/images/paper.jpg);
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        transition: 0.5s ease-in-out;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -287,6 +293,12 @@
     .email{
         display: none;
     }
+
+    .email a{
+        display: none;
+    }
+
+
 
 
 
@@ -387,6 +399,11 @@
         font-size:1.5rem;
         line-height: 6rem;
 
+    }
+
+    .cMail a{
+        display: block;
+        position: absolute;
     }
     
 

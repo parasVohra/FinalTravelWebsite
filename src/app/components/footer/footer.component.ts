@@ -22,6 +22,32 @@ export class FooterComponent implements OnInit {
     this.router.navigate(["package-list"],navigationExtras);
   }
 
+  scrollToThis(event:any){
+
+    var p = $("." + event.target.id);
+    var position = p.offset();
+    var aboutPos = position.top;
+    console.log(event.target.id);
+    console.log(p.offset());
+    window.scrollTo(0, aboutPos);
+    console.log("click on about us");
+    var isOnScreen =  $(".menuScreen").css('right');
+    
+    console.log(isOnScreen);
+    var screenWidth = $(window).width();
+    if(screenWidth < 813 && isOnScreen < 0){
+      $(".menuScreen").toggleClass('displayBlock');
+      $(".secondBar").toggleClass("pRotate");
+        $(".thirdBar").toggleClass("nRotate");
+        $(".firstBar").toggleClass("hide");
+        $(".fourthBar").toggleClass("hide");
+    }
+    
+
+
+    
+  }
+
   ngOnInit() {
     $('.input-group input').focus(function(){
       $(this).siblings().addClass('focused');

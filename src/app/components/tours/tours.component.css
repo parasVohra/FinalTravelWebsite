@@ -3,7 +3,7 @@
     background-color: #212322;
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
-    grid-auto-rows: 80rem;
+    grid-auto-rows: 81rem;
     grid-template-areas: 
     " . top . ";
 }
@@ -36,7 +36,7 @@
     grid-row-start: 1;
     grid-row-end: 2;
     grid-area: lux;
-    background: url(../../../assets/images/adventure-4.jpg);
+    background: url(../../../assets/images/resturent.jpg);
     background-size: cover;
     background-position: top;
     padding: 8rem;
@@ -54,6 +54,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin:4rem;
+    transition: all 400ms;
 }
 .honeymoonBox {
     grid-column-start: 2;
@@ -61,7 +62,7 @@
     grid-row-start: 1;
     grid-row-end: 2;
     grid-area: honey;
-    background: url(../../../assets/images/adventure-3.jpg);
+    background: url(../../../assets/images/sunset-1.jpg);
     background-size: cover;
     background-position: top;
     padding: 8rem;
@@ -79,6 +80,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin:4rem;
+    transition: all 400ms;
 }
 .advantureBox {
     grid-column-start: 3;
@@ -86,7 +88,7 @@
     grid-row-start: 1;
     grid-row-end: 2;
     grid-area: adv;
-    background:url(../../../assets/images/adventure-5.jpg);
+    background:url(../../../assets/images/paragliding-2.jpg);
     background-size: cover;
     background-position: top;
     padding: 8rem;
@@ -104,6 +106,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin:4rem;
+    transition: all 400ms;
 }
  .familyBox {
     grid-column-start: 1;
@@ -111,7 +114,7 @@
     grid-row-start: 2;
     grid-row-end: 3;
     grid-area: fam;
-    background: url(../../../assets/images/adventure-7.jpg);
+    background: url(../../../assets/images/family.jpg);
     background-size: cover;
     background-position: top;
     padding: 8rem;
@@ -129,6 +132,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin:4rem;
+    transition: all 400ms;
 }
 .weekendBox {
     grid-column-start: 2;
@@ -136,7 +140,7 @@
     grid-row-start: 2;
     grid-row-end: 3;
     grid-area: week;
-    background: url(../../../assets/images/adventure-8.jpg);
+    background: url(../../../assets/images/bedroom.jpg);
     background-size: cover;
     background-position: top;
     padding: 8rem;
@@ -154,6 +158,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin:4rem;
+    transition: all 400ms;
 }
  .backpackingBox {
     grid-column-start: 3;
@@ -161,7 +166,7 @@
     grid-row-start: 2;
     grid-row-end: 3;
     grid-area: back;
-    background: url(../../../assets/images/adventure-2.jpg);
+    background: url(../../../assets/images/journey.jpg);
     background-size: cover;
     background-position: top;
     padding: 8rem;
@@ -179,6 +184,13 @@
     background-position: center;
     background-repeat: no-repeat;
     margin:4rem;
+    transition: all 400ms;
+}
+
+
+
+ .luxuriousOverlay:hover, .honeymoonOverlay:hover, .advantureOverlay:hover, .familyOverlay:hover, .weekendOverlay:hover, .backpackingOverlay:hover {
+    transform: scale(1.1);
 }
 
 @media screen and (max-width:1440px) {
