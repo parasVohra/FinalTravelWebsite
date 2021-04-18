@@ -2,13 +2,16 @@
   "name": "server-app",
   "version": "0.0.0",
   "license": "MIT",
+  "homepage": "https://parasVohra.github.io/FinalTravelWebsite/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "predeploy": "ng build --prod --base-href 'https://parasVohra.github.io/FinalTravelWebsite/' --deploy-url 'https://parasVohra.github.io/FinalTravelWebsite/'",
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {

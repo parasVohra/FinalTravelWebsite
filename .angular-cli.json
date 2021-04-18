@@ -6,11 +6,8 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
+      "outDir": "dist/FinalTravelWebsite",
+      "assets": ["/FinalTravelWebsite/assets", "favicon.ico"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -18,12 +15,8 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": [
-        "styles.css"
-      ],
-      "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js"
-      ],
+      "styles": ["styles.css"],
+      "scripts": ["../node_modules/jquery/dist/jquery.min.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
